@@ -1,6 +1,8 @@
+const defaultConfig = require('../config/webpack.config')
 
 module.exports = ({ config }) => {
-
+    // デフォルト設定をざっくりとかぶせる
+    config.resolve = defaultConfig().resolve
 
     config.module.rules.push({
         test: /\.(ts|tsx)$/,
@@ -18,7 +20,5 @@ module.exports = ({ config }) => {
         ],
     });
     config.resolve.extensions.push('.ts', '.tsx');
-
-
     return config;
 };

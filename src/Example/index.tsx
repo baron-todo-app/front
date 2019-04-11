@@ -18,7 +18,7 @@ interface Props {
   width?: number
 }
 
-const StyledButton = styled.button<Props>`
+export const StyledButton = styled.button<Props>`
   background: transparent;
   border-radius: 3px;
   border: 2px solid palevioletred;
@@ -42,7 +42,7 @@ export const Example = (props: ExampleProps) => {
       <button onClick={countUp}>+</button>
       <button onClick={countDown}>-</button>
 
-      <StyledButton width={200} onClick={() => 'foo'}>
+      <StyledButton width={300} onClick={() => 'foo'}>
         ok
       </StyledButton>
     </div>
