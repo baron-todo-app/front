@@ -25,7 +25,7 @@ export const StyledButton = styled.button<Props>`
   color: palevioletred;
   margin: 0 1em;
   padding: 0.25em 1em;
-  width: ${props => (props.width ? props.width : 300)}px;
+  width: ${props => (props.width ? props.width : 100)}px;
 `
 
 export const Example = (props: ExampleProps) => {
@@ -37,14 +37,10 @@ export const Example = (props: ExampleProps) => {
   return (
     <div>
       {flag && <p>{text}</p>}
-      <button onClick={action}>ボタン</button>
+      <StyledButton onClick={action}>ボタン</StyledButton>
       <p>count:{count}</p>
-      <button onClick={countUp}>+</button>
-      <button onClick={countDown}>-</button>
-
-      <StyledButton width={300} onClick={() => 'foo'}>
-        ok
-      </StyledButton>
+      <StyledButton onClick={countUp}>+</StyledButton>
+      <StyledButton onClick={countDown}>-</StyledButton>
     </div>
   )
 }
