@@ -1,14 +1,18 @@
-import React, { Component } from 'react'
-import { Example } from './Example'
+import React from 'react'
+import { withRouter, RouteComponentProps } from 'react-router'
+import { routes as Routes } from './router'
+import 'rbx/index.css'
 
-class App extends Component {
-  render() {
+type Props = RouteComponentProps
+
+class InnerComponent extends React.Component<Props> {
+  public render() {
     return (
       <>
-        <Example text={'aa'} action={() => ''} />
+        <Routes />
       </>
     )
   }
 }
 
-export default App
+export const App = withRouter(InnerComponent)

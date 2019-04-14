@@ -18,6 +18,12 @@ module.exports = {
     settings: {
         react: {
             version: require('./package.json').dependencies.react,
+            pragma: "React",
+            linkComponents: [
+                // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+                "Hyperlink",
+                {"name": "Link", "linkAttribute": "to"}
+            ]
         },
     },
     plugins: [
@@ -33,7 +39,7 @@ module.exports = {
         'node': true,
         'jest/globals': true
     },
-    'rules': {
+    rules: {
         // .eslintrc.js にPrettierのルールを定義 →
         // ESLintの処理時にPrettierのルールもやってもらう
         'prettier/prettier': ['error', {
@@ -43,5 +49,6 @@ module.exports = {
         }],
         '@typescript-eslint/explicit-function-return-type': 0, // ts-lintとの差分吸収
         '@typescript-eslint/explicit-member-accessibility': 0, // ts-lintとの差分吸収
+        'react/prop-types': 'off',
     }
 }

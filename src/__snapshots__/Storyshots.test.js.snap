@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components Example 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "color": "black",
+          "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          Components
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          Example
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    id="story-root"
+    style={Object {}}
+  >
+    <div>
+      <p>
+        ああああ
+      </p>
+      <button
+        className="sc-bdVaJa dZfBHu"
+        onClick={[Function]}
+      >
+        ボタン
+      </button>
+      <p>
+        count:
+        0
+      </p>
+      <button
+        className="sc-bdVaJa dZfBHu"
+        onClick={[Function]}
+      >
+        +
+      </button>
+      <button
+        className="sc-bdVaJa dZfBHu"
+        onClick={[Function]}
+      >
+        -
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "color": "black",
+          "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Story Source
+        </h1>
+        <pre
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fafafa",
+              "display": "flex",
+              "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+              "fontSize": ".88em",
+              "justifyContent": "space-between",
+              "lineHeight": 1.5,
+              "overflowX": "scroll",
+              "padding": ".5rem",
+            }
+          }
+        >
+          <div>
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#444",
+                  }
+                }
+              >
+                &lt;
+                Example
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    text
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      "
+                      <span
+                        style={
+                          Object {
+                            "color": "#22a",
+                            "wordBreak": "break-word",
+                          }
+                        }
+                      >
+                        ああああ
+                      </span>
+                      "
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    flag
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    action
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      {
+                      <span
+                        style={
+                          Object {
+                            "color": "#170",
+                          }
+                        }
+                      >
+                        action
+                      </span>
+                      }
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#444",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </div>
+          <button
+            onClick={[Function]}
+            style={
+              Object {
+                "alignSelf": "flex-start",
+                "backgroundColor": "rgb(255, 255, 255)",
+                "borderColor": "rgb(238, 238, 238)",
+                "borderImage": "initial",
+                "borderRadius": "3px",
+                "borderStyle": "solid",
+                "borderWidth": "1px",
+                "cursor": "pointer",
+                "flexShrink": "0",
+                "fontSize": "13px",
+                "overflow": "hidden",
+                "padding": "3px 10px",
+              }
+            }
+            type="button"
+          >
+            Copy
+          </button>
+        </pre>
+      </div>
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h3
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            Example
+            " Component
+          </h3>
+          <small>
+            No propTypes defined!
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

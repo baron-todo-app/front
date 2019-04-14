@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Example } from '.'
 
 describe('Example', () => {

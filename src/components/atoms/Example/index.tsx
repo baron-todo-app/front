@@ -28,7 +28,7 @@ export const StyledButton = styled.button<Props>`
   width: ${props => (props.width ? props.width : 100)}px;
 `
 
-export const Example = (props: ExampleProps) => {
+export const Example: React.FC<ExampleProps> = props => {
   const { text, flag, action } = props
   const [count, countChg] = useState(0)
   const countUp = useCallback(() => countChg(prev => prev + 1), [])

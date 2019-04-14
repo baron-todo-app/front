@@ -1,1 +1,3 @@
-/src/serviceWorker.ts
+src/serviceWorker.ts
+src/**/__snapshots__/**
+src/share/**
