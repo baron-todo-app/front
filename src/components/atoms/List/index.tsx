@@ -3,11 +3,13 @@ import { List as _List } from 'rbx'
 import _ from 'lodash'
 import { Query } from '../../../share/graphql.type'
 
-export interface IList {
+interface Props {
   list: Pick<Query, 'getTasks'>['getTasks']
 }
 
-export const List: React.FC<IList> = ({ list }) => (
+export type ListProps = Props
+
+export const List: React.FC<Props> = ({ list }) => (
   <>
     <_List>
       {_.map(list, (v, i) => (

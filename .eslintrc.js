@@ -49,6 +49,9 @@ module.exports = {
         }],
         '@typescript-eslint/explicit-function-return-type': 0, // ts-lintとの差分吸収
         '@typescript-eslint/explicit-member-accessibility': 0, // ts-lintとの差分吸収
-        'react/prop-types': 'off',
+        'react/prop-types': 'off', // tsとの差分吸収
+
+        // 空のinterface OK
+        '@typescript-eslint/no-empty-interface': 0,
     }
 }

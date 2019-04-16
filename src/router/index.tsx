@@ -1,5 +1,6 @@
 import { renderRoutes } from 'react-router-config'
 import { Task } from '../components/environments/Task'
+import { TaskAdd } from '../components/environments/TaskAdd'
 
 export const routes: React.ComponentType = () =>
   renderRoutes([
@@ -9,8 +10,8 @@ export const routes: React.ComponentType = () =>
       path: '/'
     },
     {
-      component: Task,
+      component: TaskAdd,
       exact: true,
-      path: '/:id'
+      path: '/add'
     }
   ])
