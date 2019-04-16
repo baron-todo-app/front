@@ -6,12 +6,18 @@ import { FieldProps } from 'formik'
 interface Props {
   field: FieldProps['field']
   placeholder: string
+  maxLength: number
 }
 
 type InputProps = _InputProps & Props
 
 export const Input: React.FC<InputProps> = ({ field, ...props }) => (
   <>
-    <_Input size={props.size} placeholder={props.placeholder} {...field} />
+    <_Input
+      size={props.size}
+      placeholder={props.placeholder}
+      maxLength={props.maxLength}
+      {...field}
+    />
   </>
 )

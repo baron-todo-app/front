@@ -1,20 +1,8 @@
 import React from 'react'
-import {AddForm} from "../../organisms/AddForm";
-import { resources } from '../../../lib/resources'
+import { TaskAdd as _TaskAdd } from '../../ecosystems/TaskAdd'
 
-export const TaskAdd: React.FC = () => {
-  const initValue = {
-    title: '',
-    body: ''
-  }
-
-
-  return(
-    <>
-      <AddForm
-        initValue={initValue}
-        handleSubmit={resources.addTask}
-      />
-    </>
-  )
-}
+export const TaskAdd: React.FC = () => (
+  <>
+    <_TaskAdd />
+  </>
+)

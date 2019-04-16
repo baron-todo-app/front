@@ -1,10 +1,12 @@
-import {addTaskQ, getTasksQ} from '../../share/gqlRepository/task'
+import { addTaskQ, getTasksQ } from '../../share/gqlRepository/task'
 import { FreeWord, Query, AddTask, Mutation } from '../../share/graphql.type'
 import { print } from 'graphql/language/printer'
 import { GraphQLClient } from 'graphql-request'
 
-// todo env
-const graphQLClient = new GraphQLClient('http://localhost:5000/graphql', {})
+const graphQLClient = new GraphQLClient(
+  `${process.env.REACT_APP_ENDPOINT}/graphql`,
+  {}
+)
 
 interface Resources {
   fetchTasks: (p: FreeWord) => Promise<Pick<Query, 'getTasks'>>

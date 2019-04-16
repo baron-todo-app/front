@@ -5,7 +5,8 @@ import { Control, Field, Column } from 'rbx'
 import { withFormik, Field as FromikField, InjectedFormikProps } from 'formik'
 import { FreeWord, Query } from '../../../share/graphql.type'
 import { ListProps } from '../../atoms/List'
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom'
+import { dto } from '../../../share/config'
 
 interface FormValues extends FreeWord {}
 
@@ -14,16 +15,15 @@ interface FormProps {
   handleSubmit: (p: FormValues) => Promise<Pick<Query, 'getTasks'>>
   setList: (p: ListProps['list']) => void
   setIsLoading: (p: boolean) => void
+  setIsError: (p: boolean) => void
 }
 
 export type SearchProps = FormProps
 
-// todo maxレングス
-// 検索フォームのバリデーション結果
 const _Search: React.FC<InjectedFormikProps<FormProps, FormValues>> = props => (
   <>
     <Column.Group centered>
-      <Column size={10}>
+      <Column size={6}>
         <form onSubmit={props.handleSubmit}>
           <Field kind="group">
             <Control expanded>
@@ -32,6 +32,7 @@ const _Search: React.FC<InjectedFormikProps<FormProps, FormValues>> = props => (
                 component={Input}
                 placeholder={'検索ワード'}
                 size={'large'}
+                maxLength={dto.task.input.body.length}
               />
             </Control>
 
@@ -46,7 +47,7 @@ const _Search: React.FC<InjectedFormikProps<FormProps, FormValues>> = props => (
             </Control>
 
             <Control>
-              <Link to='/add'>
+              <Link to="/add">
                 <FromikField
                   component={Button}
                   color={'info'}
@@ -67,9 +68,14 @@ export const Search = withFormik<FormProps, FormValues>({
   mapPropsToValues: (p: FormProps) => ({ ...p.initValue }),
   handleSubmit: async (formValue, p) => {
     p.props.setIsLoading(true)
-    const v = await p.props.handleSubmit(formValue)
-    p.props.setList(v.getTasks)
-    p.setSubmitting(false)
-    p.props.setIsLoading(false)
+    try {
+      const v = await p.props.handleSubmit(formValue)
+      p.props.setList(v.getTasks)
+    } catch (e) {
+      p.props.setIsError(true)
+    } finally {
+      p.setSubmitting(false)
+      p.props.setIsLoading(false)
+    }
   }
 })(_Search)

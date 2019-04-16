@@ -10,7 +10,8 @@ export const SearchList: React.FC<SearchListProps> = ({
   initValue,
   handleSubmit,
   setList,
-  setIsLoading
+  setIsLoading,
+  setIsError
 }) => (
   <>
     <Container>
@@ -19,6 +20,7 @@ export const SearchList: React.FC<SearchListProps> = ({
         handleSubmit={handleSubmit}
         setList={setList}
         setIsLoading={setIsLoading}
+        setIsError={setIsError}
       />
       <List list={list} />
     </Container>

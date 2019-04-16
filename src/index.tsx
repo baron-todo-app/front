@@ -15,11 +15,3 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister()
-
-// todo
-// /Volumes/workspace/tmp/my-app/src/share/gqlRepository/task/index.ts
-// 相対パス
-
-// todo
-// readmeに下記追加
-// https://qiita.com/maaz118/items/472fc45b9bd6c4442cd7

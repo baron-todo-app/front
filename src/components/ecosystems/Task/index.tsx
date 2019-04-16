@@ -10,13 +10,24 @@ export const Task: React.FC = () => {
 
   const [list, setList] = React.useState()
   const [isLoading, setIsLoading] = React.useState(false)
+  const [isError, setIsError] = React.useState(false)
 
   React.useEffect(() => {
     ;(async () => {
-      const r = await resources.fetchTasks({ txt: initValue.txt })
-      setList(r.getTasks)
+      try {
+        const r = await resources.fetchTasks({ txt: initValue.txt })
+        setList(r.getTasks)
+      } catch (e) {
+        setIsError(true)
+      }
     })()
   }, [])
+
+  React.useEffect(() => {
+    if (isError) {
+      throw new Error('エラー')
+    }
+  }, [isError])
 
   return (
     <>
@@ -30,6 +41,7 @@ export const Task: React.FC = () => {
           handleSubmit={resources.fetchTasks}
           setList={setList}
           setIsLoading={setIsLoading}
+          setIsError={setIsError}
         />
       </Section>
     </>
