@@ -1,11 +1,13 @@
 import React from 'react'
 import { resources } from '../lib/resources'
-import { sleep } from '../lib/util'
+import { sleep} from '../lib/util'
 import { FreeWord, Task } from '../share/graphql.type'
+import {isNotFoundException} from "../lib/util";
 
 type SetIsError = (p: boolean) => void
 type SetInit = (p: boolean) => void
 type SetIsLoading = (p: boolean) => void
+type SetIsNotFound = (p: boolean) => void
 
 export function useError(isError: boolean) {
   React.useEffect(() => {
@@ -80,7 +82,8 @@ export function useFetchData<T>(
   setInit: SetInit,
   setInitValue: (p: T) => void,
   setIsError: SetIsError,
-  setIsLoading: SetIsLoading
+  setIsLoading: SetIsLoading,
+  setIsNotFound: SetIsNotFound
 ) {
   React.useEffect(() => {
     if (id === '') {
@@ -96,6 +99,10 @@ export function useFetchData<T>(
         // eslint-disable-next-line
         setInitValue(r.getTask as any as T)
       } catch (e) {
+        if (isNotFoundException(e)) {
+          setIsNotFound(true)
+          return
+        }
         setIsError(true)
       } finally {
         setIsLoading(false)

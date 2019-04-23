@@ -58,3 +58,13 @@ export function isUnprocessableEntityException(e: any) {
   // nestjsとうまく連家させれば、もっとよくなる
   return lensResStatus(e) === 422
 }
+
+/**
+ *
+ * @param e
+ */
+// eslint-disable-next-line
+export function isNotFoundException(e: any) {
+  // nestjsとうまく連家させれば、もっとよくなる
+  return lensResStatus(e) === 404
+}

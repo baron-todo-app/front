@@ -25,6 +25,8 @@ export const TaskUpsert: React.FC<TaskUpsertProps> = ({
   )
   const [isError, setIsError] = React.useState(false)
   const [isLoading, setIsLoading] = React.useState(false)
+  const [isNotFound, setIsNotFound] = React.useState(false)
+
 
   useError(isError)
   useFetchData<UpdateTask>(
@@ -33,8 +35,13 @@ export const TaskUpsert: React.FC<TaskUpsertProps> = ({
     setInit,
     setInitValue,
     setIsError,
-    setIsLoading
+    setIsLoading,
+    setIsNotFound
   )
+
+  if (isNotFound) {
+    return <>対象データがありません。</>
+  }
 
   return (
     <>

@@ -2,6 +2,7 @@ import { renderRoutes } from 'react-router-config'
 import { Task } from '../components/environments/Task'
 import { TaskAdd } from '../components/environments/TaskAdd'
 import { TaskEdit } from '../components/environments/TaskEdit'
+import {NotFound} from "../components/environments/NotFound";
 
 export const paths = {
   top: '/',
@@ -25,6 +26,9 @@ export const routes: React.ComponentType = () =>
     {
       component: TaskEdit,
       exact: true,
-      path: '/:id'
+      path: '/:id(\\d+)'
+    },
+    {
+      component: NotFound,
     }
   ])

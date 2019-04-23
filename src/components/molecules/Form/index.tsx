@@ -108,7 +108,7 @@ export const Form = withFormik<FormProps, FormValues>({
   validateOnChange: false,
 
   enableReinitialize: true,
-  // validationSchema: (p: FormProps) => Yup.object().shape(p.validationSchema),
+  validationSchema: (p: FormProps) => Yup.object().shape(p.validationSchema),
   mapPropsToValues: (p: FormProps) => ({ ...p.initValue }),
   handleSubmit: async (formValue, p) => {
     try {

@@ -16,6 +16,5 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister()
 
-// todo 存在シナいページ /addxxx /123459
 // todo テスト
 // todo context provider 使ってもいいかな...
