@@ -1,9 +1,9 @@
 import React from 'react'
 import { Search, SearchProps } from '../../molecules/Search'
-import { List, ListProps } from '../../atoms/List'
-import { Container } from 'rbx'
+import { List, ListProps } from '../../molecules/List'
+import { Column } from 'rbx'
 
-type SearchListProps = ListProps & SearchProps
+export type SearchListProps = ListProps & SearchProps
 
 export const SearchList: React.FC<SearchListProps> = ({
   list,
@@ -11,18 +11,34 @@ export const SearchList: React.FC<SearchListProps> = ({
   handleSubmit,
   setList,
   setIsLoading,
-  setIsError
+  setIsError,
+  onClick,
+  setDoneID,
+  isLoading,
+  setFreeWord
 }) => (
   <>
-    <Container>
-      <Search
-        initValue={initValue}
-        handleSubmit={handleSubmit}
-        setList={setList}
-        setIsLoading={setIsLoading}
-        setIsError={setIsError}
-      />
-      <List list={list} />
-    </Container>
+    <Column.Group centered>
+      <Column size={6}>
+        <Search
+          initValue={initValue}
+          handleSubmit={handleSubmit}
+          setList={setList}
+          setIsLoading={setIsLoading}
+          setIsError={setIsError}
+          setFreeWord={setFreeWord}
+        />
+      </Column>
+    </Column.Group>
+    <Column.Group centered>
+      <Column size={8}>
+        <List
+          list={list}
+          onClick={onClick}
+          setDoneID={setDoneID}
+          isLoading={isLoading}
+        />
+      </Column>
+    </Column.Group>
   </>
 )

@@ -37,7 +37,8 @@ module.exports = {
     env: {
         'browser': true,
         'node': true,
-        'jest/globals': true
+        'jest/globals': true,
+        'es6': true
     },
     rules: {
         // .eslintrc.js にPrettierのルールを定義 →

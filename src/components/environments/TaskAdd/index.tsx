@@ -1,8 +1,9 @@
 import React from 'react'
-import { TaskAdd as _TaskAdd } from '../../ecosystems/TaskAdd'
+import { TaskUpsert as _TaskAdd } from '../../ecosystems/TaskUpsert'
+import { RouteComponentProps } from 'react-router'
 
-export const TaskAdd: React.FC = () => (
-  <>
-    <_TaskAdd />
-  </>
+type TaskAddProps = RouteComponentProps
+
+export const TaskAdd: React.FC<TaskAddProps> = props => (
+  <_TaskAdd history={props.history} bTxt={'追加'} />
 )

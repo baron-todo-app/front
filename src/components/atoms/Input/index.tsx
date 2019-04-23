@@ -7,16 +7,24 @@ interface Props {
   field: FieldProps['field']
   placeholder: string
   maxLength: number
+  color: Pick<_InputProps, 'color'>
 }
 
 type InputProps = _InputProps & Props
 
-export const Input: React.FC<InputProps> = ({ field, ...props }) => (
+export const Input: React.FC<InputProps> = ({
+  field,
+  size,
+  maxLength,
+  placeholder,
+  color
+}) => (
   <>
     <_Input
-      size={props.size}
-      placeholder={props.placeholder}
-      maxLength={props.maxLength}
+      size={size}
+      placeholder={placeholder}
+      maxLength={maxLength}
+      color={color}
       {...field}
     />
   </>

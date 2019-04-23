@@ -1,8 +1,9 @@
 import React from 'react'
-import { Task as _Task } from '../../ecosystems/Task'
+import { TasksOverview } from '../../ecosystems/TasksOverview'
+import { RouteComponentProps } from 'react-router'
 
-export const Task: React.FC = () => (
-  <>
-    <_Task />
-  </>
+type TaskProps = RouteComponentProps
+
+export const Task: React.FC<TaskProps> = props => (
+  <TasksOverview history={props.history} />
 )

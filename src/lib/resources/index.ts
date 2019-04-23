@@ -1,21 +1,7 @@
-import { addTaskQ, getTasksQ } from '../../share/gqlRepository/task'
-import { FreeWord, Query, AddTask, Mutation } from '../../share/graphql.type'
-import { print } from 'graphql/language/printer'
-import { GraphQLClient } from 'graphql-request'
+import { http } from './http'
+import { value } from './value'
 
-const graphQLClient = new GraphQLClient(
-  `${process.env.REACT_APP_ENDPOINT}/graphql`,
-  {}
-)
-
-interface Resources {
-  fetchTasks: (p: FreeWord) => Promise<Pick<Query, 'getTasks'>>
-  addTask: (p: AddTask) => Promise<Pick<Mutation, 'addTask'>>
+export const resources = {
+  ...http,
+  ...value
 }
-
-const resources: Resources = {
-  fetchTasks: p => graphQLClient.request(print(getTasksQ(p))),
-  addTask: p => graphQLClient.request(print(addTaskQ(p)))
-}
-
-export { resources }
