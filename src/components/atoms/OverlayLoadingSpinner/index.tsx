@@ -1,7 +1,7 @@
 import React from 'react'
 import MDSpinner from 'react-md-spinner'
 
-interface Props {
+export interface Props {
   size?: number
   isLoading: boolean
 }

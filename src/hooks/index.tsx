@@ -1,8 +1,8 @@
 import React from 'react'
 import { resources } from '../lib/resources'
-import { sleep} from '../lib/util'
+import { sleep } from '../lib/util'
 import { FreeWord, Task } from '../share/graphql.type'
-import {isNotFoundException} from "../lib/util";
+import { isNotFoundException } from '../lib/util'
 
 type SetIsError = (p: boolean) => void
 type SetInit = (p: boolean) => void

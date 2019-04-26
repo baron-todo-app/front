@@ -23,6 +23,10 @@ function lensResMessage(e: any) {
  * ローディングを見せるために 若干遅延させる
  */
 export function sleep() {
+  if (process.env.NODE_ENV === 'test') {
+    // テスト時は 不要
+    return
+  }
   return new Promise(resolve => {
     setTimeout(() => {
       resolve()
@@ -55,6 +59,10 @@ export function makeErrorMsg(e: any) {
  */
 // eslint-disable-next-line
 export function isUnprocessableEntityException(e: any) {
+  if (process.env.NODE_ENV === 'test') {
+    // テスト時は 不要
+    return
+  }
   // nestjsとうまく連家させれば、もっとよくなる
   return lensResStatus(e) === 422
 }

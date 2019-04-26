@@ -8,18 +8,24 @@ interface Props {
   type: 'submit' | 'button'
 }
 
-type ButtonProps = _ButtonProps & Props & FieldProps
+export type ButtonProps = _ButtonProps & Props & FieldProps
 
-export const Button: React.FC<ButtonProps> = props => (
+export const Button: React.FC<ButtonProps> = ({
+  color,
+  size,
+  type,
+  form,
+  bTxt
+}) => (
   <>
     <_Button
-      color={props.color}
-      size={props.size}
-      type={props.type}
-      state={props.form.isSubmitting ? 'loading' : undefined}
-      disabled={props.form.isSubmitting}
+      color={color}
+      size={size}
+      type={type}
+      state={form.isSubmitting ? 'loading' : undefined}
+      disabled={form.isSubmitting}
     >
-      {props.bTxt}
+      {bTxt}
     </_Button>
   </>
 )

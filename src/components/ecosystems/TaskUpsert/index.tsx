@@ -27,7 +27,6 @@ export const TaskUpsert: React.FC<TaskUpsertProps> = ({
   const [isLoading, setIsLoading] = React.useState(false)
   const [isNotFound, setIsNotFound] = React.useState(false)
 
-
   useError(isError)
   useFetchData<UpdateTask>(
     id,

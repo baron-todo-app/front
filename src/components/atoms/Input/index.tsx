@@ -10,7 +10,7 @@ interface Props {
   color: Pick<_InputProps, 'color'>
 }
 
-type InputProps = _InputProps & Props
+export type InputProps = _InputProps & Props
 
 export const Input: React.FC<InputProps> = ({
   field,

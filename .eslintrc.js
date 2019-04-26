@@ -12,8 +12,8 @@ module.exports = {
         'plugin:prettier/recommended', // eslint-plugin-prettier 推奨設定
         'plugin:@typescript-eslint/recommended', // typescript-eslint 推奨設定
         'prettier/@typescript-eslint',// ESLintにないTS固有のルールを担う
+        'plugin:jest/recommended',
         'plugin:react/recommended',
-        'plugin:jest/recommended'
     ],
     settings: {
         react: {

@@ -2,7 +2,7 @@ import { renderRoutes } from 'react-router-config'
 import { Task } from '../components/environments/Task'
 import { TaskAdd } from '../components/environments/TaskAdd'
 import { TaskEdit } from '../components/environments/TaskEdit'
-import {NotFound} from "../components/environments/NotFound";
+import { NotFound } from '../components/environments/NotFound'
 
 export const paths = {
   top: '/',
@@ -29,6 +29,6 @@ export const routes: React.ComponentType = () =>
       path: '/:id(\\d+)'
     },
     {
-      component: NotFound,
+      component: NotFound
     }
   ])
