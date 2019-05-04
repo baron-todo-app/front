@@ -2,7 +2,7 @@ import React from 'react'
 import 'rbx/index.css'
 import { withRouter, RouteComponentProps } from 'react-router'
 import { routes as Routes } from './router'
-import { ErrorBoundary } from './ErrorBoundary'
+import { ErrorBoundary } from './components/environments/ErrorBoundary'
 
 type Props = RouteComponentProps
 

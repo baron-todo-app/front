@@ -39,7 +39,7 @@ const _Form: React.FC<InjectedFormikProps<FormProps, FormValues>> = props => (
     <form onSubmit={props.handleSubmit}>
       <Field>
         <Label>
-          <Label>タイトル</Label>
+          <Label>*タイトル</Label>
         </Label>
         <Field.Body>
           <Field>

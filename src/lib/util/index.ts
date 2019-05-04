@@ -4,7 +4,7 @@ import { apiMap, ApiMap } from '../../config/apiMap'
 // eslint-disable-next-line
 function lensErrors(e: any): any {
   // nestjsとうまく連家させれば、もっとよくなる
-  return _.head(e.response.errors)
+  return _.head(_.get(e.response, 'errors', []))
 }
 
 // eslint-disable-next-line
@@ -76,3 +76,5 @@ export function isNotFoundException(e: any) {
   // nestjsとうまく連家させれば、もっとよくなる
   return lensResStatus(e) === 404
 }
+
+// todo テスト

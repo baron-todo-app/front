@@ -6,7 +6,7 @@ import { RouteComponentProps } from 'react-router'
 import { useOverviewInit, useError, useTaskDone } from '../../../hooks'
 import { OverlayLoadingSpinner } from '../../atoms/OverlayLoadingSpinner'
 
-interface TasksOverviewProps {
+export interface TasksOverviewProps {
   history: RouteComponentProps['history']
 }
 
