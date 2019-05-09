@@ -40,8 +40,8 @@ export const List: React.FC<Props> = ({
             <Table.Heading>詳細</Table.Heading>
           </Table.Row>
         </Table.Head>
-        <tbody style={{cursor: 'pointer'}}>
-        {/*<Table.Body style={{ cursor: 'pointer' }}>*/}
+        <tbody style={{ cursor: 'pointer' }}>
+          {/*<Table.Body style={{ cursor: 'pointer' }}>*/}
           {_.map(list, (v, i) => (
             <Table.Row key={i} onClick={() => onClick(v.id.toString())}>
               <Table.Cell>

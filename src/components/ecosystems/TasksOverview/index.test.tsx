@@ -1,7 +1,7 @@
 import React from 'react'
 import { TasksOverview, TasksOverviewProps } from '.'
 import { mount } from 'enzyme'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import { Section } from 'rbx'
 
 describe('TasksOverview', () => {

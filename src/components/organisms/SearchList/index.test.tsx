@@ -2,7 +2,7 @@ import React from 'react'
 import { SearchList, SearchListProps } from '.'
 import { Column } from 'rbx'
 import { mount } from 'enzyme'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 
 describe('SearchList', () => {
   it('存在確認', () => {
