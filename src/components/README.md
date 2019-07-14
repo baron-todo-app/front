@@ -11,6 +11,10 @@ button, input, p
 search-form, like-button  
 ![Molecules](./Molecules.png "Molecules")
 
+---
+↑ライブラリ化↑  
+↓アプリケーション側の関心↓  
+---
 
 ## Organisms
 tweet-item, user-profile  
