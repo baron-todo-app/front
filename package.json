@@ -151,6 +151,7 @@
     "react-router-dom": "^5.0.0",
     "react-test-renderer": "^16.8.6",
     "react-testing-library": "^7.0.0",
+    "redux": "^4.0.4",
     "require-context.macro": "^1.0.4",
     "sinon": "^7.3.2",
     "styled-components": "^4.2.0",
