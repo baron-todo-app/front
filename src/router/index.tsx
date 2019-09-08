@@ -3,6 +3,8 @@ import { Task } from '../components/environments/Task'
 import { TaskAdd } from '../components/environments/TaskAdd'
 import { TaskEdit } from '../components/environments/TaskEdit'
 import { NotFound } from '../components/environments/NotFound'
+import { RenderProps } from '../components/environments/RenderProps'
+import { ContextAPI } from '../components/environments/ContextAPI'
 
 export const paths = {
   top: '/',
@@ -27,6 +29,16 @@ export const routes: React.ComponentType = () =>
       component: TaskEdit,
       exact: true,
       path: '/:id(\\d+)'
+    },
+    {
+      component: RenderProps,
+      exact: true,
+      path: '/render_props'
+    },
+    {
+      component: ContextAPI,
+      exact: true,
+      path: '/context_api'
     },
     {
       component: NotFound
