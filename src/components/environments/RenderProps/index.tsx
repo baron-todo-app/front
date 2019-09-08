@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 
-export { RenderProps }
 const useCounter = (v: number) => {
   const [count, setCount] = useState(v)
   return {
@@ -11,7 +10,7 @@ const useCounter = (v: number) => {
   }
 }
 
-const RenderProps: React.FC = () => {
+export const RenderProps: React.FC = () => {
   const { count, setCount } = useCounter(10)
 
   const _render2 = () => <Child count={count} setCount={setCount} />
@@ -39,6 +38,7 @@ const ComponentBox2: React.FC<X> = props => (
 
 // ----------------------------------------------------
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Child: React.FC<any> = props => (
   <>
     {props.count}

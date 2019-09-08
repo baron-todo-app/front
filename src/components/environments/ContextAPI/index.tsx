@@ -2,15 +2,17 @@
 
 import React, { useContext } from 'react'
 
-export { ContextAPI }
-
-type RootContext = {
-    vvv: string
+interface RootContext {
+  vvv: string
 }
 
 const RootContext = React.createContext<RootContext>({ vvv: '' })
 
-const ContextAPI: React.FC = () => (
+const selector = () => {
+  return RootContext
+}
+
+export const ContextAPI: React.FC = () => (
   <>
     <RootContext.Provider value={{ vvv: 'xyz' }}>
       <ChildA />
@@ -59,8 +61,4 @@ const ChildX: React.FC = () => {
       <p>ChildX: {vvv}</p>
     </>
   )
-}
-
-const selector = () => {
-  return RootContext
 }

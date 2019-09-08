@@ -11,11 +11,6 @@ button, input, p
 search-form, like-button  
 ![Molecules](./Molecules.png "Molecules")
 
----
-↑ライブラリ化↑  
-↓アプリケーション側の関心↓  
----
-
 ## Organisms
 tweet-item, user-profile  
 ![Organisms](./Organisms.png "Organisms")
@@ -25,7 +20,6 @@ tweet-item, user-profile
 アプリケーションのドメインひとくくりを表現する  
 timeline, trend, recommend-user  
 ![Ecosystems](./Ecosystems.png "Ecosystems")
-
 
 ## Environments
 ページに相当する  
